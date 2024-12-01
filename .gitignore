@@ -3,6 +3,7 @@ node_modules
 .env
 ./dist/
 ./src/download/
+./repositories/
 ./src/repositories/
 ./src/repositories/content
 **.db
