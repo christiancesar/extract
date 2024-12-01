@@ -1,0 +1,38 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --inspect --ignore-watch node_modules src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/community": "^0.3.16",
+    "@langchain/core": "^0.3.19",
+    "@prisma/client": "^5.22.0",
+    "@types/cli-progress": "^3.11.6",
+    "@types/pdf-parse": "^1.1.4",
+    "cli-progress": "^3.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "langchain": "^0.3.6",
+    "node": "^20.16.0",
+    "openai": "^4.73.1",
+    "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.1.4",
+    "prisma": "^5.22.0",
+    "puppeteer": "^23.9.0",
+    "tiktoken": "^1.0.17",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "^5.5.4"
+  }
+}

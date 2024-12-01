@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id                         String  @id @default(uuid())
+  title                      String?
+  author                     String?
+  link                       String
+  link_pdf                   String?
+  duplicated                 Boolean @default(false)
+  extension                  String?
+  exclusion                  Boolean @default(false)
+  exclusion_reason           String?
+  description                String?
+  date_published             String?
+  source                     String?
+  search_string              String?
+  content                    String?
+  errors                     String?
+  analytical_extraction_done Boolean @default(false)
+  keywords                   String?
+  citation                   String?
+  RQ1_ANSWER                 String?
+  RQ2_ANSWER                 String?
+  RQ3_ANSWER                 String?
+  RQ4_ANSWER                 String?
+  RQ5_ANSWER                 String?
+  IC1_ANSWER                 String?
+  IC1_VALIDATION             Boolean @default(false)
+  IC2_ANSWER                 String?
+  IC2_VALIDATION             Boolean @default(false)
+  IC3_ANSWER                 String?
+  IC3_VALIDATION             Boolean @default(false)
+
+  EC2_ANSWER     String?
+  EC2_VALIDATION Boolean @default(false)
+  EC3_ANSWER     String?
+  EC3_VALIDATION Boolean @default(false)
+  EC4_ANSWER     String?
+  EC4_VALIDATION Boolean @default(false)
+  EC5_ANSWER     String?
+  EC5_VALIDATION Boolean @default(false)
+}
